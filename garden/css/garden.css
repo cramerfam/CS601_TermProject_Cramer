@@ -1,0 +1,65 @@
+/* Header and Title */
+
+#gardenheader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    width: 80%;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+/* Gallery Grid */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-grid > div {
+    display: grid;
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.overlay {
+    grid-row: 1;
+    grid-column: 1;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #decdc1;
+}
+
+.text {
+    color: #312F2F;
+    font-size: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+:is(#carrots:hover, 
+    #rainbowchard:hover,
+    #garlic:hover,
+    #lettuce:hover,
+    #tomatoes:hover, 
+    #eggplant:hover,
+    #strawberries:hover,
+    #peppers:hover) .overlay {
+    opacity: 0.8;
+}

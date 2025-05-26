@@ -1,0 +1,43 @@
+/* Header Title */
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* Info Box */
+
+#baseballinfobox {
+    height: 100px;
+    width: 525px;
+    border: 2px solid #312F2F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#baseballinfobox > p {
+    font-weight: 500;
+    font-size: 15px;
+    margin: 5px;
+    text-decoration: underline solid #FF6B6B;
+}
+
+#baseballdirections {
+    font-size: 15px;
+    text-align: center;
+}
+
+/* Map Area */
+
+#baseballcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+area {
+    cursor: pointer;
+}
