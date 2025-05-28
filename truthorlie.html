@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Truths or Lies?</title>
+    <title>True or Not?</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./truthslies/css/truthslies.css">
+    <script src="./truthslies/js/truthslies.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>hello truths/lies</h1>
+    <div id="navbar">
+        <img src="./home/img/flower.png">
+        <a href="./index.html">Home</a>
+        <a href="./career.html">Career</a>
+        <a href="./baseball.html">Baseball</a>
+        <a href="./truthorlie.html">True or Not?</a>
+    </div>
+
+    <h1>Truths or Lies?</h1>
+    <button id="loadButton">Try Your Luck!</button>
+
+    <!-- Draggable Elements -->
+    <div id="canvasContainer"></div>
+
+    <!-- Drop Zones -->
+    <div id="info"></div>
+    <div id="sorting-area">
+
+        <!-- Truths -->
+        <div id="trueDropZone" class="dropzone">
+            <span class="dropTitle">Truths</span>
+        </div>
+
+        <!-- Lies -->
+        <div id="falseDropZone" class="dropzone">
+            <span class="dropTitle">Lies</span>
+        </div>
+    </div>
+    
 </body>
 </html>
