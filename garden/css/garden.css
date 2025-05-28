@@ -19,7 +19,7 @@ h2 {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .gallery-grid > div {
@@ -60,6 +60,24 @@ img {
     #tomatoes:hover, 
     #eggplant:hover,
     #strawberries:hover,
-    #peppers:hover) .overlay {
+    #peppers:hover,
+    #blueberries:hover,
+    #zucchini:hover,
+    #peas:hover,
+    #butternut:hover) .overlay {
     opacity: 0.8;
+}
+
+@media screen and (max-width: 800px) {
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
