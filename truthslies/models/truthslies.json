@@ -1,16 +1,13 @@
-{
-    "truths" : [            
-        {"id": 1, "statement": "I am a dual citizen", "explanation": "I'm a US and Italian citizen", "type": "true"},
-        {"id": 2, "statement": "I saw the Dalai Lama at Universal Studios", "explanation": "He was speaking at the Gibson Amphitheatre there.", "type": "true"},
-        {"id": 3, "statement": "I used to be a preschool teacher", "explanation": "I have also worked in advertising, PR, and special events.", "type": "true"},
-        {"id": 4, "statement": "I am a Dodgers fan", "explanation": "I lived in Los Angeles for ~15 years.", "type": "true"},
-        {"id": 5, "statement": "I don't like taking naps", "explanation": "Weird right? Naps make me groggy.", "type": "true"}
-    ],
-    "lies" : [
-        {"id": 6, "statement": "I have three kids", "explanation": "I have two kids, ages 9 & 5.", "type": "lie"},
-        {"id": 7, "statement": "I was raised on the east coast", "explanation": "I have only lived in California and Texas.", "type": "lie"},
-        {"id": 8, "statement": "I studied abroad in Paris", "explanation": "I studied abroad in Tokyo.", "type": "lie"},
-        {"id": 9, "statement": "Football is my favorite sport", "explanation": "I went to high school in TX, yet still don't care about football.", "type": "lie"},
-        {"id": 10, "statement": "I have never broken a bone", "explanation": "I broke my tailbone as a kid.", "type": "lie"}
-    ]
-}
+[            
+    {"id": 1, "statement": "I am a dual citizen", "explanation": "I'm a US and Italian citizen", "type": "true"},
+    {"id": 2, "statement": "I saw the Dalai Lama at Universal Studios", "explanation": "He was speaking at the Gibson Amphitheatre there.", "type": "true"},
+    {"id": 3, "statement": "I have never broken a bone", "explanation": "I broke my tailbone as a kid.", "type": "lie"},
+    {"id": 4, "statement": "I was raised on the east coast", "explanation": "I have only lived in California and Texas.", "type": "lie"},
+    {"id": 5, "statement": "I used to be a preschool teacher", "explanation": "I have also worked in advertising, PR, and special events.", "type": "true"},
+    {"id": 6, "statement": "Football is my favorite sport", "explanation": "I went to high school in TX, yet still don't care about football.", "type": "lie"},
+    {"id": 7, "statement": "I am a Dodgers fan", "explanation": "I lived in Los Angeles for ~15 years.", "type": "true"},
+    {"id": 8, "statement": "I don't like taking naps", "explanation": "Weird right? Naps make me groggy.", "type": "true"},
+    {"id": 9, "statement": "I have three kids", "explanation": "I have two kids, ages 9 & 5.", "type": "lie"},  
+    {"id": 10, "statement": "I studied abroad in Paris", "explanation": "I studied abroad in Tokyo.", "type": "lie"}
+    
+]
