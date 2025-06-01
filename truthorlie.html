@@ -20,26 +20,34 @@
         <a href="./truthorlie.html">True or Not?</a>
     </div>
 
-    <h1>Truths or Lies?</h1>
-    <button id="loadButton">Try Your Luck!</button>
-
-    <!-- Draggable Elements -->
-    <div id="canvasContainer"></div>
-
-    <!-- Drop Zones -->
-    <div id="info"></div>
-    <div id="sorting-area">
-
-        <!-- Truths -->
-        <div id="trueDropZone" class="dropzone">
-            <span class="dropTitle">Truths</span>
+    <div id="container">
+         <h1>Truths or Lies?</h1>
+        <div id="infoContainer">
+            <button id="loadButton">Try Your Luck!</button>
+            <div id="info">
+                <span id="says">Francesca Says...</span>
+                <div id="explanationText">Click the button to play!</div>
+            </div>
         </div>
 
-        <!-- Lies -->
-        <div id="falseDropZone" class="dropzone">
-            <span class="dropTitle">Lies</span>
+        <!-- Draggable Elements -->
+        <div id="canvasContainer"></div>
+
+        <!-- Drop Zones -->
+        <div id="sorting-area">
+
+            <!-- Truths -->
+            <div id="trueDropZone" class="dropzone">
+                <span class="dropTitle">Truths</span>
+            </div>
+
+            <!-- Lies -->
+            <div id="falseDropZone" class="dropzone">
+                <span class="dropTitle">Lies</span>
+            </div>
         </div>
     </div>
+   
     
 </body>
 </html>

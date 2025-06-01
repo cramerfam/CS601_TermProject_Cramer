@@ -1,0 +1,88 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+canvas {
+    border: 2px solid #312F2F;
+    margin: 5px;
+}
+
+#canvasContainer {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    height: 310px;
+    margin-bottom: 20px;
+}
+
+#sorting-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+}
+
+#infoContainer {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#info {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF6B6B;
+    height: 75px;
+    width: 400px;
+    margin: 10px;
+    border: 4px #312F2F double;
+}
+
+#trueDropZone {
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#trueDropZone > canvas {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#falseDropZone {
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropTitle {
+    font-size: 35px;
+    text-decoration: underline 1px solid;
+}
+
+button {
+    width: 130px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 17px;
+    font-family: "Zilla Slab", serif;
+}
+
+#says {
+    color: black;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+#explanationText {
+    padding-right: 5px;
+    padding-left: 5px;
+}

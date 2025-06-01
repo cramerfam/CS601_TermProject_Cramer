@@ -1,9 +1,10 @@
 //API URL as constant
-const statementsApi   = 'https://cramerfam.github.io/CS601_TermProject_Cramer/models/truthslies.json';
+const statementsApi   = 'https://cramerfam.github.io/CS601_TermProject_Cramer/truthslies/models/truthslies.json';
 //DOM elements as constants
 const loadButton      = document.getElementById('loadButton');
 const canvasContainer = document.getElementById('canvasContainer');
 const dropZones       = ['trueDropZone', 'falseDropZone'];
+const infoZone        = document.getElementById('explanationText');
 //Set event names as constants
 const CLICK      = 'click';
 const DRAG_START = 'dragstart';
@@ -25,37 +26,40 @@ loadButton.addEventListener(CLICK, async () => {
     loadButton.disabled = true;
     loadButton.classList.add('loaded');
     loadButton.innerText = 'Loaded';
+    infoZone.innerText = 'Is it true or a lie? Drag the statement tile to the proper column.'
 
     //Get data
     statementsData = await fetchData();
 
-    //Iterate over categories in topics object
-    for (let type in statementsData) {
-        let category = statementsData[type];
+    //Create a canvas for each statement in each category
+    statementsData.forEach(item => {
+        const statement   = item.statement;
+        const explanation = item.explanation;
+        const type        = item.type;
+        const id          = item.id;
 
-        //Create a canvas for each statement in each category
-        category.forEach(item => {
-            const statement   = item.statement;
-            const explanation = item.explanation;
+        const canvas = document.createElement('canvas');
+        canvas.width = 320;
+        canvas.height = 40;
+        canvas.draggable = true;
+        canvas.dataset.type = type;
+        canvas.dataset.explanation = explanation;
+        canvas.id = id;
 
-            const canvas = document.createElement('canvas');
+        const context = canvas.getContext("2d");
+        context.textAlign = 'center';
+        context.textBaseline = 'middle';
+        context.font = "15px Zilla Slab";
+        context.fillText(statement, (canvas.width / 2), (canvas.height / 2));
 
-            canvas.width = 150;
-            canvas.width = 150;
-            canvas.draggable = true;
-            canvas.dataset.type = type;
-            canvas.id = statement;
-
-            //Set canvas data when drag begins
-            canvas.addEventListener(DRAG_START, (e) => {
-                e.dataTransfer.setData('text', canvas.id);
-                infoZone.innerText = '';
-            })
-
-            //Add the canvas to the container
-            canvasContainer.appendChild(canvas);
+        //Set canvas data when drag begins
+        canvas.addEventListener(DRAG_START, (e) => {
+            e.dataTransfer.setData('text', canvas.id);
         })
-    }
+
+        //Add the canvas to the container
+        canvasContainer.appendChild(canvas);
+    })
 })
 
 //Iterate through drop zones
@@ -73,24 +77,29 @@ dropZones.forEach(id => {
     dropZone.addEventListener(DROP, (e) => {
         e.preventDefault();
 
-        const canvasId   = e.dataTransfer.getData('text');
-        const canvas     = document.getElementById(canvasId);
-        const type       = canvas.dataset.type;
+        const canvasId    = e.dataTransfer.getData('text');
+        const canvas      = document.getElementById(canvasId);
+        const dropZone    = document.getElementById(id);
+        const type        = canvas.dataset.type;
+        const explanation = canvas.dataset.explanation;
 
         //If actually true
         if (id === 'trueDropZone' && type === 'true') {
-            container.appendChild(canvas);
+            dropZone.appendChild(canvas);
+            infoZone.innerText = explanation;
         //If actually false
         } else if (id === 'falseDropZone' && type === 'lie') {
-            container.appendChild(canvas); 
+            dropZone.appendChild(canvas);
+            infoZone.innerText = explanation;
         } else {
-            console.log("ERROR")
+            infoZone.innerText = "Sorry! Please try again."
         }
 
         //If the canvas container is empty, hide it and show a final message
         if (canvasContainer.children?.length === 0) {
-            canvasContainer.style.display = 'none';
-            loadButton.style.display = 'none';
+            canvasContainer.style.gridTemplateColumns = 'repeat(1, 1fr)';
+            canvasContainer.style.fontSize = '20px';
+            canvasContainer.innerText = 'Great job! You guessed them all!'
         }
     })
 });
