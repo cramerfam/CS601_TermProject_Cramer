@@ -17,6 +17,10 @@ canvas {
     margin-bottom: 20px;
 }
 
+#canvasContainer.loaded {
+    height: auto;
+}
+
 #sorting-area {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -1,0 +1,75 @@
+/* Main container & key images */
+
+#careerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#bookImg {
+    width: 750px;
+}
+
+#penImg {
+    width: 350px;
+    cursor: pointer;
+}
+
+/* Container for the written text */
+
+#bookContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#bookTextContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    width: 600px;
+    padding-bottom: 100px;
+}
+
+#bookTextCol1, #bookTextCol2 {
+    font-family: "Shadows Into Light Two", cursive;
+    width: 255px;
+    height: 250px;
+}
+
+#bookTextCol1 > p,
+#bookTextCol2 > p {
+    width: 255px;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-animation: type 3s steps(40) forwards;
+    animation: type 3s steps(40) forwards;
+}
+
+#bookTextCol2 > p {
+    padding-left: 10px;
+}
+
+/* Typing animation */
+
+@keyframes type {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes type {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

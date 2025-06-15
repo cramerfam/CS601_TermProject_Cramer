@@ -129,6 +129,7 @@ const message = {
 }
 
 function displayText(evt) {
+    //Use the id of the hovered element to pull the data from the constant above
     let id          = evt.id,
         statsObj    = message[id],
         stadiumName = statsObj.stadiumName,
@@ -140,11 +141,13 @@ function displayText(evt) {
         score       = statsObj.score,
         infoText, matchupText, dateText, newHtml;
     
+    //Create the text snippets and concatenate them
     infoText = `${stadiumName} | ${teamName} | ${location}`;
     matchupText = `They played the ${matchup} and ${status} with a final score of ${score}.`;
     dateText = `${date}`;
 
     newHtml = `<p> ${infoText} </p><p> ${matchupText} </p><p> ${dateText} </p>`;
 
+    //Set the text in the infoBox
     infoBox.innerHTML = newHtml;
 }

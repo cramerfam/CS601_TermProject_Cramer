@@ -13,11 +13,12 @@
 </head>
 <body>
     <div id="navbar">
-        <img src="./home/img/flower.png">
+        <img src="./home/img/flower.png" alt="flower logo">
         <a href="./index.html">Home</a>
-        <a href="./career.html">Career</a>
+        <a class="current" href="#">Baseball</a>
         <a href="./garden.html">Garden</a>
         <a href="./truthorlie.html">True or Not?</a>
+        <a href="./career.html">Career</a>
     </div>
     <div id="baseballcontainer">
         <h1>The Cramer Family Baseball Map</h1>
@@ -26,22 +27,22 @@
             <p> Hover over a stadium to learn about the game we saw! </p>
         </div>
         <div id="baseballinfobox"></div>
-        <img id="baseballmapimg" src="./baseball/img/baseballmap.png" alt="map of visited baseball stadiums" usemap="#baseballmap" width="800px" height="480px">
+        <img id="baseballmapimg" src="./baseball/img/baseballmap.png" alt="map of visited baseball stadiums" usemap="#baseballmap" width="800" height="480">
         <map name="baseballmap">
-            <area shape="circle" coords="88, 37, 15" alt="Seattle" id="seattle" onmouseover=(displayText(this))>
-            <area shape="circle" coords="74, 86, 10" alt="Portland" id="portland" onmouseover=(displayText(this))>
-            <area shape="circle" coords="34, 228, 15" alt="San Francisco" id="sanfrancisco" onmouseover=(displayText(this))>
-            <area shape="circle" coords="68, 220, 15" alt="Oakland" id="oakland" onmouseover=(displayText(this))>
-            <area shape="circle" coords="80, 252, 10" alt="Fresno" id="fresno" onmouseover=(displayText(this))>
-            <area shape="circle" coords="70, 310, 15" alt="Anaheim" id="anaheim" onmouseover=(displayText(this))>
-            <area shape="circle" coords="101, 289, 15" alt="Los Angeles" id="losangeles" onmouseover=(displayText(this))>
-            <area shape="circle" coords="101, 325, 15" alt="San Diego" id="sandiego" onmouseover=(displayText(this))>
-            <area shape="circle" coords="188, 334, 15" alt="Phoenix" id="phoenix" onmouseover=(displayText(this))>
-            <area shape="circle" coords="300, 228, 15" alt="Denver" id="denver" onmouseover=(displayText(this))>
-            <area shape="circle" coords="417, 359, 15" alt="Arlington" id="arlington" onmouseover=(displayText(this))>
-            <area shape="circle" coords="569, 341, 15" alt="Montgomery" id="montgomery" onmouseover=(displayText(this))>
-            <area shape="circle" coords="610, 317, 15" alt="Atlanta" id="atlanta" onmouseover=(displayText(this))>
-            <area shape="circle" coords="691, 450, 15" alt="Miami" id="miami" onmouseover=(displayText(this))>
+            <area shape="circle" coords="88,37,15" alt="Seattle" id="seattle" href="#none" onmouseover=(displayText(this))>
+            <area shape="circle" coords="74,86,10" alt="Portland" id="portland" href="#none" onmouseover=(displayText(this))>
+            <area shape="circle" coords="34,228,15" alt="San Francisco" id="sanfrancisco" href="#none" onmouseover=(displayText(this))>
+            <area shape="circle" coords="68,220,15" alt="Oakland" id="oakland" href="#none" onmouseover=(displayText(this))>
+            <area shape="circle" coords="80,252,10" alt="Fresno" id="fresno" href="#none" onmouseover=(displayText(this))>
+            <area shape="circle" coords="70,310,15" alt="Anaheim" id="anaheim" href="#none" onmouseover=(displayText(this))>
+            <area shape="circle" coords="101,289,15" alt="Los Angeles" id="losangeles" href="#none" onmouseover=(displayText(this))>
+            <area shape="circle" coords="101,325,15" alt="San Diego" id="sandiego" href="#none" onmouseover=(displayText(this))>
+            <area shape="circle" coords="188,334,15" alt="Phoenix" id="phoenix" href="#none" onmouseover=(displayText(this))>
+            <area shape="circle" coords="300,228,15" alt="Denver" id="denver" href="#none" onmouseover=(displayText(this))>
+            <area shape="circle" coords="417,359,15" alt="Arlington" id="arlington" href="#none" onmouseover=(displayText(this))>
+            <area shape="circle" coords="569,341,15" alt="Montgomery" id="montgomery" href="#none" onmouseover=(displayText(this))>
+            <area shape="circle" coords="610,317,15" alt="Atlanta" id="atlanta" href="#none" onmouseover=(displayText(this))>
+            <area shape="circle" coords="691,450,15" alt="Miami" id="miami" href="#none" onmouseover=(displayText(this))>
         </map>
     </div>
 </body>

@@ -27,6 +27,8 @@ loadButton.addEventListener(CLICK, async () => {
     loadButton.classList.add('loaded');
     loadButton.innerText = 'Loaded';
     infoZone.innerText = 'Is it true or a lie? Drag the statement tile to the proper column.'
+    //Allow canvas container to have fixed height before load, then shrink as tiles are moved out
+    canvasContainer.classList.add('loaded');
 
     //Get data
     statementsData = await fetchData();

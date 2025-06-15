@@ -41,6 +41,14 @@ img {
     background-color: #decdc1;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: 500;
+}
+
 .text {
     color: #312F2F;
     font-size: 20px;
