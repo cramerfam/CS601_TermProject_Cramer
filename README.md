@@ -1,6 +1,6 @@
 # CS 601 Final Project
 
-Please take a look around. Please take a look around. You can open index.html in your browser to view the game or launch it live in your IDE with an extension.
+Please take a look around. Please take a look around. You can open index.html in your browser to view the game or launch it live in your IDE with an extension. You can also view the project live on a published GitHub page here: https://cramerfam.github.io/CS601_TermProject_Cramer/index.html.
 
 ## About My Project
 
